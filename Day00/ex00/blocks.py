@@ -1,13 +1,10 @@
 import sys
 
 def validate_line(line):
-    # Strip newline characters
     line = line.strip()
-    # Check if the line is 32 characters long and starts with exactly 5 zeros
     return len(line) == 32 and line.startswith('00000') and not line.startswith('000000')
 
 def main():
-    # Get the number of lines to process from command-line arguments
     if len(sys.argv) < 2:
         print("Please provide the number of lines to process.")
         sys.exit(1)
