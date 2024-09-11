@@ -9,3 +9,7 @@ A Python script that can take some text from its standard input and then print o
 ### Ex01
 
 Decyphering the sentence by taking first letter of every word and putting them to ine string
+
+### Ex01
+
+Finding M pattern in files
