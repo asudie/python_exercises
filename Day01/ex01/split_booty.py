@@ -1,4 +1,5 @@
-from Day01.ex00.ingots import add_ingot, empty
+# from Day01.ex00.ingots import add_ingot, empty
+from ..ex00.ingots import add_ingot, empty
 
 def split_booty(*purses: dict) -> tuple:
     # Step 1: Calculate the total number of gold ingots
@@ -33,3 +34,5 @@ if __name__ == "__main__":
     
     result = split_booty(purse4, purse5)
     print(result)
+
+# python -m Day01.ex01.split_booty

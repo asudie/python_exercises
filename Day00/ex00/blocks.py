@@ -17,14 +17,14 @@ def main():
     
     processed_lines = 0
 
-    # Read from stdin line by line
     for line in sys.stdin:
         if processed_lines >= num_lines:
             break
         
         if validate_line(line):
             print(line.strip())
-            processed_lines += 1
+        
+        processed_lines += 1
 
 if __name__ == "__main__":
     main()
