@@ -27,3 +27,23 @@ Function called split_booty that takes any number of purses (dictionaries) as ar
 ### Ex02
 
 Decorator to print SQUEAK when calling other functions
+
+## Day 02
+
+### Ex00
+
+A funny custom class to pass some assertions
+
+### Ex 01
+
+A little morality game with cheating and collaborating options, 5 builtin and 1 custom strategies
+
+## Day 03
+
+### Ex 00
+
+Change an html file using python script and beautiful soup
+
+### Ex 01
+
+Producer creates a list of transactions, cunsumer tracks "bad guys" using redis

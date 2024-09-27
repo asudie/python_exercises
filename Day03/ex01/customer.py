@@ -2,22 +2,18 @@ import redis
 import json
 import argparse
 
-# Redis setup
 r = redis.Redis()
 
-# Function to process incoming messages
 def process_message(message, bad_guys):
     transaction = json.loads(message)
     metadata = transaction['metadata']
     amount = transaction['amount']
 
-    # Swap sender and receiver if recipient is a bad guy and amount is positive
     if metadata['to'] in bad_guys and amount > 0:
         metadata['from'], metadata['to'] = metadata['to'], metadata['from']
     
     return transaction
 
-# Main consumer function
 def main(bad_guys):
     pubsub = r.pubsub()
     pubsub.subscribe('transactions')
