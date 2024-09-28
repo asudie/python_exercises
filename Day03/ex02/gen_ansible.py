@@ -4,22 +4,19 @@ def generate_ansible_playbook(todo_file='../../materials/todo.yml', deploy_file=
     with open(todo_file, 'r') as f:
         todo = yaml.safe_load(f)
 
-    # Start building the deploy list
     deploy = [{
         'hosts': 'all',
         'tasks': []
     }]
 
-    # Ensure destination directory exists
     deploy[0]['tasks'].append({
         'name': 'Ensure destination directory exists',
         'file': {
-            'path': './ansible_test/',  # Destination path for files
+            'path': './ansible_test/',
             'state': 'directory'
         }
     })
 
-    # Install packages task
     deploy[0]['tasks'].append({
         'name': 'Install packages',
         'package': {
@@ -28,34 +25,30 @@ def generate_ansible_playbook(todo_file='../../materials/todo.yml', deploy_file=
         }
     })
 
-    # Copy exploit.py
     deploy[0]['tasks'].append({
         'name': 'Copy exploit.py',
         'copy': {
             'src': '../ex00/exploit.py',
-            'dest': './ansible_test/exploit.py'  # Updated path
+            'dest': './ansible_test/exploit.py'
         }
     })
 
-    # Copy producer.py
     deploy[0]['tasks'].append({
         'name': 'Copy producer.py',
         'copy': {
             'src': '../ex01/producer.py',
-            'dest': './ansible_test/producer.py'  # Updated path
+            'dest': './ansible_test/producer.py'
         }
     })
 
-    # Copy consumer.py
     deploy[0]['tasks'].append({
         'name': 'Copy consumer.py',
         'copy': {
             'src': '../ex01/consumer.py',
-            'dest': './ansible_test/consumer.py'  # Updated path
+            'dest': './ansible_test/consumer.py'
         }
     })
 
-    # Debug copy destination
     deploy[0]['tasks'].append({
         'name': 'Debug copy destination',
         'debug': {
@@ -63,13 +56,11 @@ def generate_ansible_playbook(todo_file='../../materials/todo.yml', deploy_file=
         }
     })
 
-    # Run producer.py
     deploy[0]['tasks'].append({
         'name': 'Run producer.py',
-        'command': 'python3 ./ansible_test/producer.py'  # Updated path
+        'command': 'python3 ./ansible_test/producer.py'
     })
 
-    # Run consumer.py with bad guy accounts
     deploy[0]['tasks'].append({
         'name': 'Run consumer.py with bad guy accounts',
         'shell': 'python3 ./ansible_test/consumer.py -e ' + ','.join(todo['bad_guys']) + ' &',
@@ -77,7 +68,6 @@ def generate_ansible_playbook(todo_file='../../materials/todo.yml', deploy_file=
         'poll': 0
     })
 
-    # Write to deploy.yml
     with open(deploy_file, 'w') as f:
         yaml.dump(deploy, f, default_flow_style=False)
 
