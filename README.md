@@ -47,3 +47,21 @@ Change an html file using python script and beautiful soup
 ### Ex 01
 
 Producer creates a list of transactions, cunsumer tracks "bad guys" using redis
+
+### Ex 02
+
+A Python script called gen_ansible.py that reads a todo list from todo.yml and generates a corresponding Ansible playbook file deploy.yml, which includes tasks for installing packages, copying files, and executing them on a remote server using Python.
+
+## Day 04
+
+### Ex 00
+
+A function fix_wiring() that takes three iterables (cables, sockets, plugs) and returns a generator of string commands to connect them.
+
+### Ex 01
+
+A function turrets_generator() that dynamically generates turret objects with five random personality traits (neuroticism, openness, conscientiousness, extraversion, agreeableness) that sum to 100.
+
+### Ex 02
+
+A generator function emit_gel() that simulates liquid pressure values between 0 and 100 with random step increments, and another function valve() that controls the pressure.
