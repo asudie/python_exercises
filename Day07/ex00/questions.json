@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Do you often find yourself feeling empathetic towards others?",
+        "answers": ["Yes", "No", "Sometimes", "Rarely"]
+    },
+    {
+        "question": "How do you typically respond when someone is in distress?",
+        "answers": ["I offer help immediately", "I wait to see if they ask", "I don't get involved", "I feel indifferent"]
+    },
+    {
+        "question": "How do you feel about taking risks for the benefit of others?",
+        "answers": ["I'm willing to", "I avoid risks", "It depends on the situation", "I don't like risking anything"]
+    },
+    {
+        "question": "Do you feel guilty if you unintentionally hurt someone?",
+        "answers": ["Yes, a lot", "A little", "Not really", "Not at all"]
+    },
+    {
+        "question": "When making a tough decision, do you rely more on logic or emotions?",
+        "answers": ["Mostly logic", "Mostly emotions", "A balance of both", "I act impulsively"]
+    },
+    {
+        "question": "How important is it for you to understand others' feelings?",
+        "answers": ["Very important", "Somewhat important", "Not important", "I don't care"]
+    },
+    {
+        "question": "Do you feel emotional watching others suffer on TV or in movies?",
+        "answers": ["Often", "Sometimes", "Rarely", "Never"]
+    },
+    {
+        "question": "Do you prefer working alone or with others?",
+        "answers": ["I prefer working alone", "I prefer working with others", "Depends on the task", "I don't care"]
+    },
+    {
+        "question": "How do you react when you see someone crying in public?",
+        "answers": ["I approach them", "I feel uncomfortable", "I try not to notice", "I feel indifferent"]
+    },
+    {
+        "question": "Do you think it's more important to be kind or to be right?",
+        "answers": ["Kind", "Right", "Depends on the situation", "I don't think about it"]
+    }
+]
