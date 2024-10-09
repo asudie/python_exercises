@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../ex00'))
+sys.path.insert(0, os.path.abspath('..'))
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -9,8 +9,8 @@ sys.path.insert(0, os.path.abspath('../ex00'))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Test Documentation'
-html_logo = 'logo.png'
+project = 'Test Documents'
+html_logo = '../logo.png'
 copyright = '2024, glendont'
 author = 'glendont'
 
@@ -28,5 +28,5 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'alabaster'
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
