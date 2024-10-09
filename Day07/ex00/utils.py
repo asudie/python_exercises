@@ -1,4 +1,21 @@
 def get_user_input(answers):
+    """
+    Prompt the user to select an answer from the provided list of options.
+
+    This function displays a list of possible answers, numbered sequentially, and repeatedly prompts the user to choose an 
+    answer by entering the corresponding number. It validates the input to ensure it's an integer within the range of options.
+
+    Args:
+        answers (list): A list of answer choices presented to the user.
+
+    Returns:
+        int: The number corresponding to the user's selected answer.
+
+    Notes:
+        - The function will continue to prompt the user until a valid selection is made.
+        - It handles non-integer inputs by prompting the user to re-enter a valid integer.
+        - It also ensures the selected number is within the range of the available answers.
+    """
     while True:
         try:
             # Display answer choices

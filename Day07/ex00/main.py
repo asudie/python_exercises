@@ -3,6 +3,19 @@ from .logic import decide
 from .utils import get_user_input
 
 def load_questions(file_path='questions.json'):
+    """
+    Load questions from a JSON file.
+
+    Args:
+        file_path (str): The path to the JSON file containing questions. Defaults to 'questions.json'.
+
+    Raises:
+        FileNotFoundError: If the file is not found.
+        ValueError: If the file is empty or contains invalid JSON.
+
+    Returns:
+        list: A list of questions loaded from the JSON file.
+    """
     try:
         with open(file_path, 'r') as f:
             questions = json.load(f)
@@ -14,7 +27,23 @@ def load_questions(file_path='questions.json'):
     except json.JSONDecodeError:
         raise ValueError("The 'questions.json' file contains invalid JSON.")
 
+
 def validate_physiological_data(data, min_value, max_value, label):
+    """
+    Validate physiological data against the given range.
+
+    Args:
+        data (str): The input data as a string, which will be converted to an integer.
+        min_value (int): The minimum allowed value for the physiological data.
+        max_value (int): The maximum allowed value for the physiological data.
+        label (str): The label describing the data (e.g., "Respiration").
+
+    Raises:
+        ValueError: If the data cannot be converted to an integer or if the value is outside the given range.
+
+    Returns:
+        int: The validated integer value of the physiological data.
+    """
     try:
         value = int(data)
         if value < min_value or value > max_value:
@@ -23,7 +52,18 @@ def validate_physiological_data(data, min_value, max_value, label):
     except ValueError:
         raise ValueError(f"Invalid input for {label}. Please enter an integer between {min_value} and {max_value}.")
 
+
 def main():
+    """
+    Main function that runs the Voight-Kampff test.
+
+    This function loads questions from a file, collects user input for each question, and 
+    gathers physiological data such as respiration, heart rate, blushing level, and pupillary dilation.
+    The function then uses the collected data to decide whether the subject is human or a replicant.
+
+    Raises:
+        Exception: If any error occurs during the process, it will be caught and printed.
+    """
     try:
         questions = load_questions()
         user_responses = []
