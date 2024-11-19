@@ -65,3 +65,30 @@ A function turrets_generator() that dynamically generates turret objects with fi
 ### Ex 02
 
 A generator function emit_gel() that simulates liquid pressure values between 0 and 100 with random step increments, and another function valve() that controls the pressure.
+
+## Day 05
+
+### Exercise 00
+
+A WSGI server that listens on port 8888, processes GET requests, and returns JSON responses with species-specific credentials.
+
+### Exercise 01
+
+A web application (WSGI server) to manage audio files. Users can upload audio files (checked via MIME type), which will be stored on the server and displayed in a list on the web interface.
+
+### Exercise 02
+
+Simulation of  five Time Lords (threads) sharing screwdrivers in a variation of the "Dining Philosophers" problem.
+
+## Day 07
+
+### Exercise 00
+
+A Voight-Kampff Test program that asks 10 questions stored in a JSON or SQLite file, with each answer followed by manual input of physiological variables (respiration, heart rate, blushing level, pupillary dilation). After all responses, the program outputs a binary decision of "human" or "replicant," with all logic split across appropriately modular files, initiated via main.py as a command-line interface.
+
+### Exercise 01
+
+Extended the Voight-Kampff Test with robust unit tests using Pytest to cover edge cases, such as empty or invalid question files, incorrect inputs, and invalid physiological measurements.
+
+### Exercise 02
+Generated comprehensive project documentation for the Voight-Kampff Test using Sphinx. The documentation includes a Quickstart guide for users (written in Markdown or RST) and an auto-generated API reference created using docstrings for all modules, classes, and functions. 
